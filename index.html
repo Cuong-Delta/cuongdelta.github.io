@@ -4,14 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Blog</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1051/1051326.png" type="image/png">
+    <style>
+        body { margin: 0; display: flex; height: 100vh; }
+        .sidebar { width: 20%; background-color: #e0f7fa; padding: 20px; box-sizing: border-box; }
+        .content { flex: 1; padding: 20px; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 10px 0; border-top: 1px solid #ccc; padding-top: 10px; }
+        a { text-decoration: none; color: black; }
+        a:hover { color: blue; }
+    </style>
 </head>
 <body>
-    <h1>Personal Blog</h1>
-    <ul>
-        <li>Device Driver</li>
-        <li>FPGA</li>
-        <li>Linux</li>
-        <li>Embedded Software</li>
-    </ul>
+    <div class="sidebar">
+        <h1>Personal Blog</h1>
+        <ul>
+            <li><a href="#device-driver">Device Driver</a></li>
+            <li><a href="#fpga">FPGA</a></li>
+            <li><a href="#linux">Linux</a></li>
+            <li><a href="#embedded-software">Embedded Software</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <section id="device-driver">
+            <h2>Device Driver</h2>
+            <p>Content for Device Driver page.</p>
+        </section>
+        <section id="fpga">
+            <h2>FPGA</h2>
+            <p>Content for FPGA page.</p>
+        </section>
+        <section id="linux">
+            <h2>Linux</h2>
+            <p>Content for Linux page.</p>
+        </section>
+        <section id="embedded-software">
+            <h2>Embedded Software</h2>
+            <p>Content for Embedded Software page.</p>
+        </section>
+    </div>
 </body>
 </html>
