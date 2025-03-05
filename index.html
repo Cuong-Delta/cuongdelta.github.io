@@ -10,9 +10,12 @@
         .sidebar { width: 20%; background-color: #e0f7fa; padding: 20px; box-sizing: border-box; }
         .content { flex: 1; padding: 20px; overflow-y: auto; }
         ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; border-top: 1px solid #ccc; padding-top: 10px; }
-        a { text-decoration: none; color: black; }
+        li { margin: 10px 0; border-top: 1px solid #ccc; padding-top: 10px; position: relative; }
+        a { text-decoration: none; color: black; display: inline-block; }
         a:hover { color: blue; }
+        .dropdown { display: none; position: absolute; left: 100%; top: 0; background: white; border: 1px solid #ccc; padding: 10px; z-index: 1000; }
+        li:hover > .dropdown { display: block; }
+        .triangle { display: inline-block; margin-left: 5px; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid black; }
         .github-icon { width: 24px; vertical-align: middle; margin-right: 8px; }
     </style>
 </head>
@@ -20,17 +23,54 @@
     <div class="sidebar">
         <h1>Personal Blog</h1>
         <ul>
-            <li><a href="#device-driver">Device Driver</a></li>
-            <li><a href="#fpga">FPGA</a></li>
-            <li><a href="#linux">Linux</a></li>
-            <li><a href="#embedded-software">Embedded Software</a></li>
+            <li><a href="#home">Home</a></li>
+            <li>
+                <a href="#programming">Programming <span class="triangle"></span></a>
+                <div class="dropdown">
+                    <a href="#c">C</a><br>
+                    <a href="#cpp">C++</a><br>
+                    <a href="#python">Python</a><br>
+                </div>
+            </li>
+            <li>
+                <a href="#fpga">FPGA <span class="triangle"></span></a>
+                <div class="dropdown">
+                    <a href="#xilinx">Xilinx</a><br>
+                    <a href="#intel">Intel FPGA</a>
+                </div>
+            </li>
+            <li>
+                <a href="#linux">Linux <span class="triangle"></span></a>
+                <div class="dropdown">
+                    <a href="#kernel">Kernel Development</a><br>
+                    <a href="#ubuntu">Ubuntu</a>
+                </div>
+            </li>
+            <li>
+                <a href="#asic">ASIC <span class="triangle"></span></a>
+                <div class="dropdown">
+                    <a href="#rtl">RTL Design</a><br>
+                    <a href="#verification">Verification</a>
+                </div>
+            </li>
+            <li>
+                <a href="#embedded-system">Embedded System <span class="triangle"></span></a>
+                <div class="dropdown">
+                    <a href="#arduino">Arduino</a><br>
+                    <a href="#raspberry-pi">Raspberry Pi</a>
+                </div>
+            </li>
             <li><a href="#about-me">About Me</a></li>
         </ul>
     </div>
     <div class="content">
-        <section id="device-driver">
-            <h2>Device Driver</h2>
-            <p>Content for Device Driver page.</p>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Welcome to the Personal Blog.</p>
+        </section>
+        <section id="programming">
+            <h2>Programming</h2>
+            <p>Content for Programming page.</p>
         </section>
         <section id="fpga">
             <h2>FPGA</h2>
@@ -40,9 +80,13 @@
             <h2>Linux</h2>
             <p>Content for Linux page.</p>
         </section>
-        <section id="embedded-software">
-            <h2>Embedded Software</h2>
-            <p>Content for Embedded Software page.</p>
+        <section id="asic">
+            <h2>ASIC</h2>
+            <p>Content for ASIC page.</p>
+        </section>
+        <section id="embedded-system">
+            <h2>Embedded System</h2>
+            <p>Content for Embedded System page.</p>
         </section>
         <section id="about-me">
             <h2>About Me</h2>
